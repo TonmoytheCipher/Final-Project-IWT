@@ -1,0 +1,322 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: 2em ;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+  font-family: 'Poppins', Arial, sans-serif;
+  background: #111;
+  color: #fff;
+}
+
+header{
+  background: #111;
+  padding: 15px 50px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo{
+  font-size: 28px;
+  font-weight: bold;
+  color: cyan;
+}
+
+.nav-links{
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a{
+  text-decoration: none;
+  color: #ddd;
+  font-size: 18px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:not(.login-btn):not(.signup-btn)::after{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background-color: royalblue;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:not(.login-btn):not(.signup-btn):hover::after{
+  width: 100%;
+}
+
+.nav-links a:hover{
+  color: cornsilk;
+}
+
+.search-box{
+  display: flex;
+  align-items: center;
+  background: #222;
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin-right: 20px;
+}
+
+.search-box input{
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  padding: 5px 10px;
+}
+
+.search-box button{
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: cyan;
+}
+
+.search-box button:hover{
+  color:cyan;
+}
+
+.login-btn,
+.signup-btn,
+.watch-btn{
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.login-btn{
+  background: transparent;
+  border: 1px solid ;
+ color: black;
+}
+
+.login-btn:hover {
+
+  background: cyan;
+  color: #111;
+}
+
+.signup-btn {
+
+   background: transparent;
+  border: 1px solid cyan;
+  color: #111;
+}
+
+.signup-btn:hover
+ {
+  background: cadetblue;
+  border-color: black;
+  color: #fff;
+}
+
+.watch-btn {
+  background: cyan;
+  border: none;
+  color: #111;
+
+}
+
+
+
+.watch-btn:hover {
+  background: cadetblue;
+  color: #fff;
+}
+
+
+
+.welcome {
+  text-align: center;
+  padding: 120px 20px 50px;
+}
+
+.welcome h1 {
+  font-size: 46px;
+  color: cyan;
+  margin-bottom: 15px;
+}
+
+
+.welcome p {
+  font-size: 18px;
+  color: #bbb;
+}
+
+.slider {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  margin-top: 30px;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.6s ease;
+}
+
+.slide {
+  min-width: 100%;
+  display: none;
+  position: relative;
+}
+
+
+
+.slide.active {
+  display: block;
+}
+
+.slide img {
+  width: 100%;
+  height: 648px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+
+.movie-info {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 60%;
+}
+
+.movie-info h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: cadetblue;
+}
+
+.movie-info p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #eee;
+}
+
+
+
+.controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+  transform: translateY(-50%);
+}
+
+
+
+.controls span {
+  font-size: 36px;
+  cursor: pointer;
+  color: #a9d9ec;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  padding: 12px 14px;
+  transition: all 0.3s ease;
+}
+
+.controls span:hover {
+  background: #a2a5a7;
+  color: #111;
+  transform: scale(1.1);
+}
+
+
+
+.watchlist {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.watchlist h2 {
+  font-size: 32px;
+  color: whitesmoke;
+  margin-bottom: 30px;
+}
+
+.movie-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+
+.movie-card {
+  background: #222;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 250px;
+  text-align: center;
+}
+
+.movie-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+
+
+.movie-card h3 {
+  margin: 15px 0;
+  color: #fff;
+}
+
+.contact {
+  text-align: center;
+  padding: 60px 20px;
+  background: #1c1c1c;
+}
+
+
+
+.contact h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: whitesmoke;
+}
+
+
+
+.social-icons a {
+  color: #ddd;
+  font-size: 26px;
+  margin: 0 12px;
+  transition: color 0.3s ease;
+}
+.social-icons a:hover {
+  color: cyan;
+}
