@@ -1,0 +1,169 @@
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background: url("/Shipra/images/wallhaven-ly9qzq.jpg") no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  transition: all 0.4s ease;
+}
+
+.signup-container {
+  position: relative;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 40px 35px;
+  border-radius: 15px;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+  overflow: hidden;
+}
+
+.signup-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 15px;
+  padding: 2px;
+  background: linear-gradient(90deg, #50b5d4, #311bf5, #f39c12, #50b5d4);
+  background-size: 300% 300%;
+  animation: borderMove 10s linear infinite;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+@keyframes borderMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.signup-container h2 {
+  margin-bottom: 25px;
+  color: #fff;
+  font-size: 28px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  background: rgba(255,255,255,0.8);
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0 0 10px rgba(243,156,18,0.4);
+}
+
+button {
+  background: linear-gradient(135deg, #75ceda, #50b5d4);
+  border: none;
+  padding: 12px;
+  width: 100%;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #311bf5, #5227c9);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(243,156,18,0.4);
+}
+
+a {
+  color: #1c82a1;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+body.dark {
+  background: #111;
+  color: #eee;
+}
+
+body.dark .signup-container {
+  background: rgba(34,34,34,0.6);
+  color: #eee;
+}
+
+body.dark input {
+  background: rgba(51,51,51,0.8);
+  color: #fff;
+}
+
+body.dark button {
+  background: linear-gradient(135deg, #f39c12, #d35400);
+}
+
+body.dark a {
+  color: #f1c40f;
+}
+
+.toggle-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: #ccc;
+  border-radius: 25px;
+  transition: 0.4s;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 20px; width: 20px;
+  left: 3px; bottom: 3px;
+  background: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background: #f39c12;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
