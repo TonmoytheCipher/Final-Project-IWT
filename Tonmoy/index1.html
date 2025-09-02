@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movies Showcase</title>
+  <link rel="stylesheet" href="/Tonmoy/css/style1.css">
+   <!-- Navbar styles from Main Page -->
+<link rel="stylesheet" href="../Tuhin/css/style1.css">
+  <!-- Category page specific styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+   <!-- Navbar -->
+  <header>
+  <nav class="navbar">
+    <div class="logo"> MovieHub</div>
+
+    <div class="search-box">
+      <input type="text" placeholder="Search movies..." id="searchInput">
+      <button><i class="fas fa-search"></i></button>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="../Tuhin/index1.html">Home</a></li>
+      <li><a href="../Tonmoy/index1.html">Trending</a></li>
+      <li><a href="../Tonmoy/index2.html">Category</a></li>
+      <li><a href="../Tuhin/index2.html">Feedback</a></li>
+      <li><a href="../Shipra/index1.html" class="login-btn">Login</a></li>
+      <li><a href="../Shipra/index2.html" class="signup-btn">Sign Up</a></li>
+    </ul>
+  </nav>
+</header>
+
+ <main class="main-content">
+  <!-- Trending Movies Section -->
+  <section class="movie-section">
+    <h2> Trending Movies</h2>
+    <div class="slider-container">
+      <span class="prev" onclick="scrollLeft('trending-movies')">&#10094;</span>
+      <div class="movie-container" id="trending-movies"></div>
+      <span class="next" onclick="scrollRight('trending-movies')">&#10095;</span>
+    </div>
+  </section>
+
+  <!-- Upcoming Movies Section -->
+  <section class="movie-section">
+    <h2>Upcoming Movies</h2>
+    <div class="slider-container">
+      <span class="prev" onclick="scrollLeft('upcoming-movies')">&#10094;</span>
+      <div class="movie-container" id="upcoming-movies"></div>
+      <span class="next" onclick="scrollRight('upcoming-movies')">&#10095;</span>
+    </div>
+  </section>
+
+  <!-- Recent Releases Section -->
+  <section class="movie-section">
+    <h2> Recent Releases</h2>
+    <div class="slider-container">
+      <span class="prev" onclick="scrollLeft('recent-movies')">&#10094;</span>
+      <div class="movie-container" id="recent-movies"></div>
+      <span class="next" onclick="scrollRight('recent-movies')">&#10095;</span>
+    </div>
+  </section>
+ </main>
+  <script src="/Tonmoy/js/index1.js"></script>
+</body>
+</html>

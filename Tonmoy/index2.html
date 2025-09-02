@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Categories</title>
+  <link rel="stylesheet" href="/Tonmoy/css/style2.css">
+  <!-- Navbar styles from Main Page -->
+  <link rel="stylesheet" href="../Tuhin/css/style1.css">
+  <!-- Category page specific styles -->
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+  <nav class="navbar">
+    <div class="logo">🎬 MovieHub</div>
+
+    <div class="search-box">
+      <input type="text" placeholder="Search movies..." id="searchInput">
+      <button><i class="fas fa-search"></i></button>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="../Tuhin/index1.html">Home</a></li>
+      <li><a href="../Tonmoy/index1.html">Trending</a></li>
+      <li><a href="../Tonmoy/index2.html">Category</a></li>
+      <li><a href="../Tuhin/index2.html">Feedback</a></li>
+      <li><a href="../Shipra/index1.html" class="login-btn">Login</a></li>
+      <li><a href="../Shipra/index2.html" class="signup-btn">Sign Up</a></li>
+    </ul>
+  </nav>
+</header>
+    <div class="page-content"></div>
+  <!-- Category Buttons -->
+  <section class="category-buttons">
+    <button onclick="showCategory('industry')">Industry</button>
+    <button onclick="showCategory('imdb')">IMDb Top 250</button>
+    <button onclick="showCategory('animation')">Animation</button>
+    <button onclick="showCategory('tv')">TV Shows</button>
+    <button onclick="showCategory('anime')">Anime</button>
+  </section>
+
+  <!-- Movie Display Section -->
+
+  <section class="movie-section">
+    <h2 id="category-title">Select a Category</h2>
+    <div class="slider-container">
+      <span class="prev" onclick="scrollLeft('category-movies')">&#10094;</span>
+      <div class="movie-container" id="category-movies"></div>
+      <span class="next" onclick="scrollRight('category-movies')">&#10095;</span>
+    </div>
+  </section>
+  </div>
+
+  <script src="/Tonmoy/js/index2.js"></script>
+</body>
+</html>
